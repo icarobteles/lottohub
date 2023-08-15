@@ -16,7 +16,7 @@ Este projeto desafia você a criar uma aplicação front-end que:
 - Oferece um combo-box/select intuitivo para mudar entre os diferentes sorteios.
 - Atualiza dinamicamente o tema, número do sorteio, data e os números sorteados conforme a seleção.
 - Garante uma experiência responsiva, ajustando-se perfeitamente a celulares e outros dispositivos.
-- Utiliza a seguinte [API](https://brainn-api-loterias.herokuapp.com/) para buscar os resultados dos sorteios.
+- Utiliza a [Loterias Caixa API](https://loteriascaixa-api.herokuapp.com/api) para buscar os resultados dos sorteios.
 
 ## Como Começar
 
