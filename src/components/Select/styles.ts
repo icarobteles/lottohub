@@ -30,7 +30,7 @@ export const Select = styled.select`
   font-weight: 500;
   line-height: normal;
 
-  @media (min-width: 760px) {
+  @media (min-width: 1020px) {
     width: 13.49419rem;
     height: 2.82525rem;
     padding: 0.88rem 1.43rem;

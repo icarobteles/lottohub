@@ -7,6 +7,4 @@ const COLORS = {
   diadesorte: "#BFAF83",
 };
 
-export type PossibleRaffles = keyof typeof COLORS;
-
 export default COLORS;

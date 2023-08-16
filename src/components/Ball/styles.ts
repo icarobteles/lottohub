@@ -17,7 +17,7 @@ export const Ball = styled.li`
   line-height: normal;
   color: #333;
 
-  @media (min-width: 760px) {
+  @media (min-width: 1020px) {
     width: 6.94981rem;
     height: 6.64763rem;
   }

@@ -1,29 +1,33 @@
 import { useEffect, useState } from "react";
-import { COLORS, PossibleRaffles } from "../../themes";
+import { COLORS } from "../../themes";
 import * as Styles from "./styles";
 import { Ball, Select } from "../../components";
 import { getLatestLotteryResults } from "../../services";
-
-interface IRaffleResults {
-  concourse: string;
-  dozens: string[];
-}
+import {
+  IGetLatestLotteryResponseAPI,
+  IPossibleRaffles,
+} from "../../interfaces";
 
 function HomePage() {
-  const [raffle, setRaffle] = useState<PossibleRaffles>("megasena");
-  const [raffleResults, setRaffleResults] = useState<IRaffleResults>({
-    concourse: "",
-    dozens: [],
-  });
+  const [raffle, setRaffle] = useState<IPossibleRaffles>(
+    IPossibleRaffles.Megasena
+  );
+  const [raffleResults, setRaffleResults] =
+    useState<IGetLatestLotteryResponseAPI>({
+      concourse: "",
+      data: "",
+      dozens: [],
+    });
 
   useEffect(() => {
     const fetchResults = async () => {
       const response = await getLatestLotteryResults({ name: raffle });
       if (!response.error) {
-        console.log(response.data);
+        const { concurso, data, dezenas } = response.data;
         setRaffleResults({
-          concourse: response.data.concurso,
-          dozens: [...response.data.dezenas],
+          concourse: concurso,
+          data: data,
+          dozens: [...dezenas],
         });
       }
     };
@@ -32,29 +36,35 @@ function HomePage() {
   }, [raffle]);
 
   return (
-    <Styles.Page>
-      <Styles.Theme color={COLORS[raffle]}>
+    <Styles.Container>
+      <Styles.Header theme={COLORS[raffle]}>
         <Select setOptionSelected={setRaffle} />
-        <div className="group">
-          <Styles.Icon></Styles.Icon>
-          <Styles.Title>{raffle}</Styles.Title>
-        </div>
+        <Styles.Logo>
+          <Styles.LogoIcon />
+          <Styles.LogoTitle>{raffle}</Styles.LogoTitle>
+        </Styles.Logo>
         <Styles.Concourse>
-          CONCURSO Nº {raffleResults.concourse}
+          CONCURSO
+          <Styles.ConcourseNumber>
+            Nº {raffleResults.concourse}
+          </Styles.ConcourseNumber>
+          <Styles.ConcourseNumberAndData>
+            {raffleResults.concourse} - {raffleResults.data}
+          </Styles.ConcourseNumberAndData>
         </Styles.Concourse>
-      </Styles.Theme>
-      <div className="ballsgroup">
-        <ul>
+      </Styles.Header>
+      <Styles.Main>
+        <Styles.BallsList>
           {raffleResults.dozens.map((dozen) => (
             <Ball key={dozen} number={dozen} />
           ))}
-        </ul>
+        </Styles.BallsList>
         <Styles.Copyright>
           Este sorteio é meramente ilustrativo e não possui nenhuma ligação com
           a CAIXA.
         </Styles.Copyright>
-      </div>
-    </Styles.Page>
+      </Styles.Main>
+    </Styles.Container>
   );
 }
 
