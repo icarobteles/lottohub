@@ -1,1 +1,1 @@
-export {};
+export { getLatestLotteryResults, instance } from "./api";
