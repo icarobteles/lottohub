@@ -26,6 +26,15 @@ Este projeto desafia você a criar uma aplicação front-end que:
 - Garante uma experiência responsiva, ajustando-se perfeitamente a celulares e outros dispositivos.
 - Utiliza a [Loterias Caixa API](https://loteriascaixa-api.herokuapp.com/api) para buscar os resultados dos sorteios.
 
+## Tecnologias Utilizadas  
+
+- React
+- React Router DOM
+- TypeScript
+- Axios
+- Styled-Components
+- Git Flow e Conventional Commits  
+
 ## Como Começar
 
 1. Clone este repositório para a sua máquina local.
