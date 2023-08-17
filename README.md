@@ -4,9 +4,17 @@ Bem-vindo ao projeto **LottoHub**! Prepare-se para mergulhar no universo emocion
 
 ![LottoHub](public/images/lottohub.png)
 
+## Status do Projeto  
+
+`MVP: finalizado`
+
 ## Sobre o Projeto
 
 Você já se perguntou como seria incrível ter uma aplicação web que traz os resultados dos sorteios das principais loterias do Brasil em um só lugar? Este projeto vai além da diversão e te convida a construir uma aplicação interativa e responsiva que oferece uma experiência única aos usuários.
+
+## Deploy  
+
+Acesse o projeto em: [LottoHub](https://lottohub.vercel.app/)  
 
 ## Requisitos & Funcionalidades
 
@@ -27,7 +35,7 @@ Este projeto desafia você a criar uma aplicação front-end que:
 
 ## Layout Responsivo
 
-Segui o design disponibilizado no [Figma](https://www.figma.com/file/H2qrYBCFMf4didYmxRwTxP/Brainn-Frontend-Challenge).
+Segui o design disponibilizado no [Figma](https://www.figma.com/file/H2qrYBCFMf4didYmxRwTxP/Brainn-Frontend-Challenge), porém realizei alguns ajustes.  
 
 ## Contribuindo
 
@@ -40,7 +48,7 @@ Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas 
 
 ## Licença
 
-Todos os direitos reservados à Brainn e toda a equipe idealizadora desse desafio
+Todos os direitos reservados à Brainn e toda a equipe idealizadora desse desafio, além da equipe desenvolvedora da API utilizada!
 
 ## Contato
 
